@@ -8,7 +8,7 @@ public class EmailIDValidation {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter an email: ");
 		String email = sc.nextLine();
-		Pattern pattern =Pattern.compile("^abc@bridgelabz.co");
+		Pattern pattern =Pattern.compile("^abc([.+_-]{0,1}[0-9a-z]+)?@[a-z0-9]+(\\.[a-z]{2,}){1,2}");
 		Matcher matcher = pattern.matcher(email);
 		boolean matchfound = matcher.find();
 		if(matchfound) {
